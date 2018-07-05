@@ -1,0 +1,140 @@
+@media print {
+@page {
+  padding: 0px;
+  margin-bottom: 30px;
+  margin-left: 30px;
+}
+* {
+text-shadow: none ;
+color: #000000 !important;
+background: transparent;
+box-shadow: none;
+}
+@font-face {
+  font-family: 'FrancoisOne'; /*a name to be used later*/
+  src: url('../fonts/FrancoisOne.ttf'); /*URL to font*/
+}
+@font-face {
+  font-family: 'DidactGothic'; /*a name to be used later*/
+  src: url('../fonts/DidactGothic.ttf'); /*URL to font*/
+}
+@font-face {
+  font-family: 'Signika-Regular'; /*a name to be used later*/
+  src: url('../fonts/Signika-Regular.ttf'); /*URL to font*/
+}
+body, p{
+  font-family: DidactGothic;
+  text-align: justify;
+}
+h1, h2, h3, h4, h5 {
+  font-family: FrancoisOne;
+}
+
+.footer, #nav_pattern {
+  display: none;
+}
+/* Navigation */
+#nav_pattern {
+	/* Suppression des marges internes et externes */
+	margin: 0px;
+	padding: 0px;
+	/* Décalage pour masquer la bordure du contenu */
+	position: relative;
+	bottom: -1px;
+}
+#nav_pattern li {
+	/* Affichage des éléments du menu côte à côte */
+	display: inline-block;
+}
+/* Aspect des onglets inactifs (par défaut) */
+#nav_pattern a {
+	display: block;
+	padding: 10px 10px 10px 10px;
+}
+
+/* Contenu des onglets */
+.tab {
+	/* Masquage des onglets*/
+  display: block;
+}
+
+.tab img{
+	width: 50%;
+}
+/** index info pattern**/
+
+.post-basic-info{
+	padding: 7% 7% 5% 7%;
+}
+.post-basic-info h3 a{
+	color: #717171;
+	font-size: 1.2em;
+	margin-bottom: 0.2em;
+	display: block;
+	transition:0.5s all;
+	-webkit-transition:0.5s all;
+	-moz-transition:0.5s all;
+	-o-transition:0.5s all;
+}
+
+/** PDF print **/
+.pdf-print{
+	float:right;
+	margin-right:1.5em;
+}
+.pdf-print span{
+	background:url(../images/pdf.png) no-repeat 0px 0px;
+	background-size: 26px;
+	height:26px;
+	width:26px;
+	display:inline-block;
+}
+
+.artical-content h2 a{
+	color: #717171;
+	font-size: 2em;
+	margin-bottom: 0.2em;
+	display: block;
+	transition:0.5s all;
+	-webkit-transition:0.5s all;
+	-moz-transition:0.5s all;
+	-o-transition:0.5s all;
+}
+.artical-content p{
+	font-size: 1em;
+	padding: 5px 0px;
+	font-weight: 400;
+}
+.artical-content header p {
+  display: inline-block;
+}
+.artical-content h3{
+	color: #717171;
+	font-size: 1.2em;
+	margin-bottom: 0.2em;
+  display: inline-block;
+  padding-right: 50px;
+	transition:0.5s all;
+	-webkit-transition:0.5s all;
+	-moz-transition:0.5s all;
+	-o-transition:0.5s all;
+}
+.artical-content li{
+	font-size: 1em;
+	margin-bottom: 0.2em;
+	transition:0.5s all;
+	-webkit-transition:0.5s all;
+	-moz-transition:0.5s all;
+	-o-transition:0.5s all;
+}
+.artical-content ul{
+	list-style-type: disc;
+	padding-left: 40px;
+}
+.artical-content>img{
+  height: 200px;
+  width: auto;
+  float: right;
+  padding-left: 10px;
+}
+}

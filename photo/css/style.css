@@ -1,0 +1,22 @@
+@font-face {
+  font-family: 'FrancoisOne'; /*a name to be used later*/
+  src: url('fonts/FrancoisOne.ttf'); /*URL to font*/
+}
+
+@font-face {
+  font-family: 'DidactGothic'; /*a name to be used later*/
+  src: url('fonts/DidactGothic.ttf'); /*URL to font*/
+}
+
+@font-face {
+  font-family: 'Signika-Regular'; /*a name to be used later*/
+  src: url('fonts/Signika-Regular.ttf'); /*URL to font*/
+}
+
+body{
+  font-family: DidactGothic;
+}
+
+h1 {
+  font-family: Signika-Regular;
+}
