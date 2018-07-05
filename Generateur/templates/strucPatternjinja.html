@@ -1,0 +1,67 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Wool.bouh.space--{{ nom_pattern }}_Pattern</title>
+    <link href="css/monstyle.css" rel='stylesheet' type='text/css' />
+    <link href="css/print.css" rel="stylesheet" type="text/css">
+
+    <script src="js/jquery.min.js" type="text/javascript"></script>
+    <script src="js/script-onglets.js" type="text/javascript"></script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="images/fav-icon.png" rel="shortcut icon" type="image/x-icon"/>
+  </head>
+  <body>
+    <div class="content">
+      <div class="wrap">
+        <div class="single-page">
+          <div class="single-page-artical">
+            <div class="artical-content">
+              <img src="{{ photo }}" title="grandma">
+              <div class="pdf-print" onClick="window.print()">
+                <span></span>
+              </div>
+              <h2>{{ nom_pattern }}</h2>
+              <p>{{ description }}</p>
+              <p>
+                <h3>For this Amigurumi you will need</h3>
+                <ul class="material">
+                  {% for materiel in materiels %}
+                    <li>{{ materiel }}</li>
+                  {% endfor %}
+                </ul>
+              </p>
+              <ul id="nav_pattern">
+                {% for etape_pattern in etapes_pattern %}
+                  {% if loop.index	== 1 %}
+                    <li><a href="#{{ etape_pattern.partie }}" data-tab="{{ etape_pattern.partie }}" class="nav_pattern-active icon_{{ etape_pattern.partie }}"></a></li>
+                   {% else %}
+                    <li><a href="#{{ etape_pattern.partie }}" data-tab="{{ etape_pattern.partie }}" class="icon_{{ etape_pattern.partie }}"></a></li>
+                   {% endif %}
+                {% endfor %}
+                <!-- choisir entre head/body/feet/apron/belt/leaf/glasses/hand -->
+              </ul>
+              {% for etape_pattern in etapes_pattern %}
+                {% if loop.index	== 1 %}
+                  <article id="{{ etape_pattern.partie }}" class="tab tab-active">
+                {% else %}
+                  <article id="{{ etape_pattern.partie }}" class="tab">
+                {% endif %}
+                <header>
+                  <h3>{{ etape_pattern.partie }}</h3>
+                  <p>{{ etape_pattern.laine }} yarn</p>
+                </header>
+                <ul class="pattern">
+                  {% for rang in etape_pattern.rangs %}
+                  <li>Round {{ rang.rg }}: {{ rang.val }}
+                  {% endfor %}
+                </ul>
+              </article>
+              {% endfor %}
+    <div class="footer">
+      <p>wool.bouh.space</p>
+      <p><a href="credit.html"></a></p>
+    </div>
+  </body>
+</html>
